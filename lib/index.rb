@@ -9,7 +9,7 @@ def main
     inputed_rss_arr << inputed_rss
     puts 'Apakah anda mau memasukkan feed RSS lagi?'
     user_choice = gets.chomp
-    break if user_choice == 'Tidak'
+    break if user_choice != 'Y'
   end
   rss_consumer = ConsumeRss.new
   rss_consumer.consume(inputed_rss_arr)

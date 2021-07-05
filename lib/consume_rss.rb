@@ -5,6 +5,7 @@ class ConsumeRss
   def consume(url)
     URI.open(url) do |rss|
       feed = RSS::Parser.parse(rss)
+      puts "\n"
       puts "Title: #{feed.channel.title}"
       feed.items.each do |item|
         puts '---------------------'
